@@ -16,6 +16,7 @@ public class FactRepository {
         return new FactIterator(this);
     }
 
+    
     private class FactIterator implements Iterator {
         
         private int currentIndex;

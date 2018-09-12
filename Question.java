@@ -1,8 +1,29 @@
 public class Question {
 
-    private String iD;
+    private String id;
+    private String question;
+    private Answer answer;
+
+
+    public Question(String id, String question, Answer answer) {
+        this.question = question;
+        this.id = id;
+    }
 
     public String getId() {
-        return this.iD;
+        return this.id;
     }
+
+    public String getQuestion() {
+        return this.question;
+    }
+
+    public Answer getAnswer() {
+        return this.answer;
+    }
+
+    public boolean getEvaluatedAnswer(String input) {
+        return true;
+    }
+    
 }

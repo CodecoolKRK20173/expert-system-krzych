@@ -9,9 +9,15 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
 
-public class RuleParser {
+public class RuleParser extends XMLParser {
     
     private RuleRepository ruleRepository;
+
+    public RuleParser() {
+        this.ruleRepository = new RuleRepository();
+        Document FactDoc = this.loadXMLDocument("rules.xml");
+        Element element = FactDoc.getDocumentElement();
+    }
 
     public RuleRepository getRuleRepository() {
         return this.ruleRepository;

@@ -12,15 +12,37 @@ public class RuleRepository {
         this.questionsMap.put(question.getId(), question);
     }
 
-    class QuestionIterator implements Iterator<Object> {
+    public Iterator getQuestionIterator() {
+        return new QuestionIterator(this);
+    }
 
-        
-        public Object next() {
-            return this.next();
+
+    class QuestionIterator implements Iterator {
+
+        private int currentIndex;
+        private String[] arrayOfQuestion;
+        private int sizeOfQuestionMap;
+
+        public QuestionIterator(RuleRepository ruleRepo) {
+            this.currentIndex = 0;
+            Set<String> keysOfQuestionMap = ruleRepo.questionsMap.keySet();
+            this.arrayOfQuestion = new String[keysOfQuestionMap.size()];
+            this.arrayOfQuestion = keysOfQuestionMap.toArray(arrayOfQuestion);
+            this.sizeOfQuestionMap = keysOfQuestionMap.size();
+        }
+
+
+        public Question next() {
+            Question nextQuestion = questionsMap.get(arrayOfQuestion[currentIndex]); 
+            currentIndex ++;
+            return nextQuestion;
         }
     
         public boolean hasNext() {
-            return true;
+            if (currentIndex < sizeOfQuestionMap) {
+                return true;
+            }
+            return false;
         }
     }
 
