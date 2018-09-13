@@ -8,11 +8,13 @@ import org.w3c.dom.*;
 public class ESProvider {
 
     private FactParser fParser; 
+    private RuleParser rParser;
     
 
     public ESProvider(FactParser fParser, RuleParser rParser) {
         this.fParser = fParser;
-        Iterator iter = this.fParser.getFactRepository().getIterator();
+        this.rParser = rParser;
+        Iterator iter = this.rParser.getRuleRepository().getQuestionIterator();
         while(iter.hasNext()) {
             System.out.println(iter.next());
         }

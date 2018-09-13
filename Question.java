@@ -8,6 +8,7 @@ public class Question {
     public Question(String id, String question, Answer answer) {
         this.question = question;
         this.id = id;
+        this.answer = answer;
     }
 
     public String getId() {
