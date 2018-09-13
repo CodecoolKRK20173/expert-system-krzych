@@ -22,10 +22,11 @@ public class Answer {
         return this.mapOfValue.get(input);
     }
 
+    
     public String getSetOfAnswers() {
         StringBuilder sb = new StringBuilder();
         Set<String> setOfKeys = this.mapOfValue.keySet();
-        System.out.println(setOfKeys.size());
+
         for (String item : setOfKeys) {
             sb.append(item);
             sb.append("    ");

@@ -3,6 +3,7 @@ import java.util.*;
 public class UI {
 
     public void printMenu() {
+        printSeparateLine();
         System.out.println("Welcome in Expert Analyzer Program!");
         printSeparateLine();
         System.out.println("1. Start program");
@@ -36,6 +37,10 @@ public class UI {
 
     public void printSeparateLine() {
         System.out.println("=====================================================================");
+    }
+
+    public void printThickSeparateline() {
+        System.out.println("----------------------------------------------------------------------");
     }
 
     public String getStringInputFromUser() {
