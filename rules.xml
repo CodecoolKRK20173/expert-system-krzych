@@ -35,4 +35,16 @@
             </Selection>
         </Answer>
     </Rule>
+    ...
+    <Rule id="family">
+        <Question>Have You got a children?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
 </Rules>

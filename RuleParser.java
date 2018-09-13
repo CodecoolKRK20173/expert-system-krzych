@@ -31,6 +31,7 @@ public class RuleParser extends XMLParser {
         System.out.println("Pierwsz lista dlu " + firstParentsList.getLength());
 
         String question = "";
+        Question newQuestion = null;
 
         for (int i = 0; i < firstParentsList.getLength(); i++) {
             System.out.println("Iteracja i nr: " + i);
@@ -57,8 +58,10 @@ public class RuleParser extends XMLParser {
 
                         
                             if (secondBranch.getNodeName().equals("Question")) {
-                            question = secondBranch.getTextContent();
-                            System.out.println("toooo " + question);
+                                question = secondBranch.getTextContent();
+                                System.out.println("toooo " + question);
+                                newQuestion = new Question(id, question, new Answer());
+                                this.ruleRepository.addQuestion(newQuestion);
                             }
                         
 
@@ -95,22 +98,23 @@ public class RuleParser extends XMLParser {
                                                 
 
                                                 List<String> parameterList = convertArrayToList(arrayOfanswsersPatterns);
-
+                                                System.out.println("Lenght of parameter list " + parameterList.size());
                                                 System.out.println(question + "czy jest puste");
                                                 System.out.println("ID :" + id);
                                                 System.out.println("Value: " + value);
                                                 System.out.println("Parameter list 1 " + parameterList.get(0));
 
                                                 if (parameterList.size() == 1) {
+                                                    System.out.println("weszlo do pojedynczego");
                                                     
-                                                    Question newQuestion = new Question(id, question, new Answer());
                                                     newQuestion.getAnswer().addValue(new SingleValue(parameterList.get(0), value));
-                                                    this.ruleRepository.addQuestion(newQuestion);
+                                                    
                                                 }
                                                 else if (parameterList.size() > 1) {
-                                                    Question newQuestion = new Question(id, question, new Answer());
+                                                    System.out.println("weszlo do multi");
+                                                    
                                                     newQuestion.getAnswer().addValue(new MultiplyValue(parameterList, value));
-                                                    this.ruleRepository.addQuestion(newQuestion);
+                                                   
                                                 }
                                                 
                                             }
