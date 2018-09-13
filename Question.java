@@ -23,8 +23,28 @@ public class Question {
         return this.answer;
     }
 
+
     public boolean getEvaluatedAnswer(String input) {
-        return true;
+        String[] userAnswerArray = input.split(",");
+        if (userAnswerArray.length == 1) {
+            return this.getAnswer().evaluateAnswerByInput(input.toLowerCase());
+        }
+        else {
+            int falseCount = 0;
+            int trueCount = 0;
+            for (String item : userAnswerArray) {
+                if (this.getAnswer().evaluateAnswerByInput(item.toLowerCase())) {
+                    trueCount ++;
+                }
+                else {
+                    falseCount ++;
+                }
+            }
+        if (trueCount > falseCount ) {
+            return true;
+        }
+        return false;
+        }
     }
     
 }
