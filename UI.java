@@ -36,15 +36,32 @@ public class UI {
     }
 
     public void printSeparateLine() {
-        System.out.println("=====================================================================");
+        System.out.println("=================================================================================================================================");
     }
 
     public void printThickSeparateline() {
-        System.out.println("----------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
     }
 
     public String getStringInputFromUser() {
         Scanner scan = new Scanner(System.in);
         return scan.nextLine();
+    }
+
+    public void printResultsOfProgram(String summary) {
+        if (summary.equals("Cannot solve problem")) {
+            printSeparateLine();
+            System.out.println("Program can't give You solution beacuse Your answer aren't matching to schedule. Think about Your answers and try again.");
+            printThickSeparateline();
+        }
+        else {
+            printSeparateLine();
+            System.out.println("Expert System recommend You to buy " + summary + "!");
+            printThickSeparateline();
+        }
+    }
+
+    public void cleanScreen() {
+        System.out.print("\033\143");
     }
 }

@@ -9,10 +9,8 @@ public class Answer {
     }
 
     public void addValue(Value value) {
-        System.out.println("GEtinput pattern lengrht :" + value.getInputPattern().size());
         for (int i = 0; i < value.getInputPattern().size(); i++) {
-            System.out.println("wlozyl to: ");
-            System.out.println(value.getInputPattern().get(i));
+           
             this.mapOfValue.put(value.getInputPattern().get(i), value.getSelectionType());
         }
     }
