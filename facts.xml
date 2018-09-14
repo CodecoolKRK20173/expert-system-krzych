@@ -29,4 +29,14 @@
             <Eval id="luxury">false</Eval>
         </Evals>
     </Fact>
+    ...
+    <Fact id="Astra">
+        <Description value="Astra"/>
+        <Evals>
+            <Eval id="family">false</Eval>
+            <Eval id="money">false</Eval>
+            <Eval id="comfort">true</Eval>
+            <Eval id="luxury">false</Eval>
+        </Evals>
+    </Fact>
 </Facts>

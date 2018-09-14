@@ -17,6 +17,7 @@ public class ESProvider {
         this.rParser = rParser;
         this.userAnswersMap = new HashMap<String,Boolean>();
         collectAnswers();
+        System.out.println(evaluate() + "wynik"); 
     }
 
 
@@ -47,8 +48,41 @@ public class ESProvider {
                         } catch (NullPointerException err) {
                             viewer.printMessage("No such answer!");
                         } 
-            }
-            
+            }   
         }
     } 
+
+    public String evaluate() {
+
+        Iterator<Fact> fIterator = this.fParser.getFactRepository().getIterator();
+        
+        
+        while(fIterator.hasNext()) {
+
+            boolean compareFlag = true;
+            Fact currentFact = fIterator.next();
+            System.out.println(currentFact.getDescription() + "tu ma byc");
+
+           
+                Set<String> keySet = currentFact.getIdSet();
+                int countOfRecordsInFact = keySet.size();
+                int countOfAnswerMatchToFact = 0;
+                String[] keyArray = new String[countOfRecordsInFact];
+                keyArray = keySet.toArray(keyArray);
+                for (String item : keyArray) {
+                    System.out.println("ziterowal fakt");
+                    System.out.println(currentFact.getValueById(item) + " dla faktu: " + currentFact.getDescription());
+                    System.out.println(userAnswersMap.get(item) + " odpowiedz usera");
+                    if (currentFact.getValueById(item) == this.userAnswersMap.get(item)) {
+                        countOfAnswerMatchToFact ++;
+                    }
+               }
+               if (countOfAnswerMatchToFact == countOfRecordsInFact) {
+                   return currentFact.getDescription();
+               }
+        }
+        return "Cannot solve problem";
+    }
+
+    // evaluate do zrobienia!
 }

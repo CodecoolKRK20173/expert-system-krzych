@@ -6,6 +6,9 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import javax.xml.parsers.ParserConfigurationException;
+
+import com.sun.javafx.runtime.SystemProperties;
+
 import org.xml.sax.SAXException;
 
 
@@ -22,9 +25,11 @@ public FactParser() {
 
     String id;
     String description;
-    Fact fact;
+    
 
     NodeList nodes = element.getChildNodes();
+
+    Fact fact = new Fact("","");
     
     for (int i = 0; i < nodes.getLength(); i++) {
         
@@ -44,10 +49,15 @@ public FactParser() {
                 if (childNode instanceof Element) {
                     Element childElement = (Element) childNode;
                     description = childElement.getAttribute("value");
+                    
+                    if (!description.equals("")) {
+                        fact = new Fact(id, description);
+
+                    }
+                    
                    
                     
-                    fact = new Fact(id, description);
-
+                    
                     NodeList evalsList = childElement.getChildNodes();
                
 
@@ -58,14 +68,23 @@ public FactParser() {
                         if (evalsNode instanceof Element) {
                             Element evalsElement = (Element) evalsNode;
                             String factId = evalsElement.getAttribute("id");
-                            boolean value = Boolean.getBoolean(evalsElement.getTextContent());
+                            System.out.println("to jest id faktu: " + factId);
+                            String valueString = evalsElement.getTextContent();
+                            System.out.println("Value string " + valueString);
+                            boolean value = Boolean.valueOf(valueString);
+                            // System.out.println(evalsElement.getTextContent() + "to jest wartosc faktu");
+                            System.out.println(value + "to jest warosc faktu");
+                            System.out.println("==============================================");
                             if (!factId.equals("")) {
                              
                                 fact.setFactValueById(factId, value);
                             } 
                         }
                     }
-                    this.factRepository.addFact(fact);
+                    if (!fact.getDescription().equals("")) {
+                        this.factRepository.addFact(fact);
+                    }
+                    
                 }
             }                
         }
