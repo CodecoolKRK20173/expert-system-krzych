@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Facts>
+    <Fact id="sand">
+        <Description value="Sandstone"/>
+        <Evals>
+            <Eval id="grains">true</Eval>
+            <Eval id="hardness">true</Eval>
+            <Eval id="colourbright">true</Eval>
+            <Eval id="h2sreaction">false</Eval>
+            <Eval id="h2sdirty">false</Eval>
+            <Eval id="anhydrittest">false</Eval>
+            <Eval id="smallgrains">false</Eval>
+            <Eval id="shows">false</Eval>
+            <Eval id="salttest">false</Eval>
+            <Eval id="carbontest">false</Eval>
+        </Evals>
+    </Fact>
+    ...
+    <Fact id="cly">
+        <Description value="Clystone"/>
+        <Evals>
+            <Eval id="grains">false</Eval>
+            <Eval id="hardness">false</Eval>
+            <Eval id="colourbright">false</Eval>
+            <Eval id="h2sreaction">false</Eval>
+            <Eval id="h2sdirty">false</Eval>
+            <Eval id="anhydrittest">false</Eval>
+            <Eval id="smallgrains">false</Eval>
+            <Eval id="shows">false</Eval>
+            <Eval id="salttest">false</Eval>
+            <Eval id="carbontest">false</Eval>
+        </Evals>
+    </Fact>
+    ...
+    <Fact id="silt">
+        <Description value="Silststone"/>
+        <Evals>
+            <Eval id="grains">false</Eval>
+            <Eval id="hardness">false</Eval>
+            <Eval id="colourbright">false</Eval>
+            <Eval id="h2sreaction">false</Eval>
+            <Eval id="h2sdirty">false</Eval>
+            <Eval id="anhydrittest">false</Eval>
+            <Eval id="smallgrains">true</Eval>
+            <Eval id="shows">false</Eval>
+            <Eval id="salttest">false</Eval>
+            <Eval id="carbontest">false</Eval>
+        </Evals>
+    </Fact>
+    ...
+    <Fact id="lime">
+        <Description value="Limestone"/>
+        <Evals>
+            <Eval id="grains">false</Eval>
+            <Eval id="hardness">true</Eval>
+            <Eval id="colourbright">true</Eval>
+            <Eval id="h2sreaction">true</Eval>
+            <Eval id="h2sdirty">false</Eval>
+            <Eval id="anhydrittest">false</Eval>
+            <Eval id="smallgrains">false</Eval>
+            <Eval id="shows">false</Eval>
+            <Eval id="salttest">false</Eval>
+            <Eval id="carbontest">false</Eval>
+        </Evals>
+    </Fact>
+    ...
+    <Fact id="marg">
+        <Description value="Marl"/>
+        <Evals>
+            <Eval id="grains">false</Eval>
+            <Eval id="hardness">false</Eval>
+            <Eval id="colourbright">true</Eval>
+            <Eval id="h2sreaction">false</Eval>
+            <Eval id="h2sdirty">true</Eval>
+            <Eval id="anhydrittest">false</Eval>
+            <Eval id="smallgrains">false</Eval>
+            <Eval id="shows">false</Eval>
+            <Eval id="salttest">false</Eval>
+            <Eval id="carbontest">false</Eval>
+        </Evals>
+    </Fact>
+    ...
+    <Fact id="salt">
+        <Description value="Salt"/>
+        <Evals>
+            <Eval id="grains">false</Eval>
+            <Eval id="hardness">true</Eval>
+            <Eval id="colourbright">true</Eval>
+            <Eval id="h2sreaction">false</Eval>
+            <Eval id="h2sdirty">false</Eval> //////
+            <Eval id="anhydrittest">false</Eval>
+            <Eval id="smallgrains">false</Eval>
+            <Eval id="shows">false</Eval>
+            <Eval id="salttest">true</Eval>
+            <Eval id="carbontest">false</Eval>
+        </Evals>
+    </Fact>
+    ...
+    <Fact id="carbon">
+        <Description value="Carbon"/>
+        <Evals>
+            <Eval id="grains">false</Eval>
+            <Eval id="hardness">false</Eval>
+            <Eval id="colourbright">false</Eval>
+            <Eval id="h2sreaction">false</Eval>
+            <Eval id="h2sdirty">false</Eval>
+            <Eval id="anhydrittest">false</Eval>
+            <Eval id="smallgrains">false</Eval>
+            <Eval id="shows">false</Eval>
+            <Eval id="salttest">false</Eval>
+            <Eval id="carbontest">true</Eval>
+        </Evals>
+    </Fact>
+    ...
+    <Fact id="anh">
+        <Description value="Anhydrite"/>
+        <Evals>
+            <Eval id="grains">false</Eval>
+            <Eval id="hardness">true</Eval>
+            <Eval id="colourbright">true</Eval>
+            <Eval id="h2sreaction">false</Eval>
+            <Eval id="h2sdirty">false</Eval>
+            <Eval id="anhydrittest">true</Eval>
+            <Eval id="smallgrains">false</Eval>
+            <Eval id="shows">false</Eval>
+            <Eval id="salttest">false</Eval>
+            <Eval id="carbontest">false</Eval>
+        </Evals>
+    </Fact>
+    ...
+    <Fact id="sando">
+        <Description value="Sandstone with oil showes"/>
+        <Evals>
+            <Eval id="grains">true</Eval>
+            <Eval id="hardness">true</Eval>
+            <Eval id="colourbright">true</Eval>
+            <Eval id="h2sreaction">false</Eval>
+            <Eval id="h2sdirty">false</Eval>
+            <Eval id="anhydrittest">false</Eval>
+            <Eval id="smallgrains">false</Eval>
+            <Eval id="shows">true</Eval>
+            <Eval id="salttest">false</Eval>
+            <Eval id="carbontest">false</Eval>
+        </Evals>
+    </Fact>
+    ...
+    <Fact id="clyo">
+        <Description value="Clystone with oil showes"/>
+        <Evals>
+            <Eval id="grains">false</Eval>
+            <Eval id="hardness">false</Eval>
+            <Eval id="colourbright">false</Eval>
+            <Eval id="h2sreaction">false</Eval>
+            <Eval id="h2sdirty">false</Eval>
+            <Eval id="anhydrittest">false</Eval>
+            <Eval id="smallgrains">false</Eval>
+            <Eval id="shows">true</Eval>
+            <Eval id="salttest">false</Eval>
+            <Eval id="carbontest">false</Eval>
+        </Evals>
+    </Fact>
+</Facts>

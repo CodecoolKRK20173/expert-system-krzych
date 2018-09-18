@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules>
+    <Rule id="grains">
+        <Question>Do You see grains on cutting without increase view of microscope?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    ...
+    <Rule id="hardness">
+        <Question>Can You easy destroy cuttings?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="no"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="yes"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    ...
+    <Rule id="colourbright">
+        <Question>What colour is cuttings?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="white,grey"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="brown,black,red,green"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    ...
+    <Rule id="h2sreaction">
+        <Question>What happened with cuttings when You put it to soil acid?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="dissapear after reaction,hard reaction"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="nothing,light reaction"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    ...
+    <Rule id="h2sdirty">
+        <Question>Is dirty mark after put cutting to soil acid? </Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    ...
+    <Rule id="anhydrittest">
+        <Question>How crystalize crush cuttings after burn? </Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="like a spiderweb"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="normally"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    ...
+    <Rule id="smallgrains">
+        <Question>Do You see grains ONLY after increase view of microscope? </Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    ...
+    <Rule id="shows">
+        <Question>What happened with cuuting when You put it under UV lamp?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="light on fiolet"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="has a fiolet shadow,nothing"/>
+            </Selection>
+        </Answer>
+    </Rule>
+     ...
+    <Rule id="carbontest">
+        <Question>Does cutting make Your hand dirty on black colour?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+     ...
+    <Rule id="salttest">
+        <Question>What kind of tasty of cuttings do You feel?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="salty,bitter"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="neither"/>
+            </Selection>
+        </Answer>
+    </Rule>
+</Rules>

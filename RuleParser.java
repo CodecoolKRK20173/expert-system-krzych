@@ -16,7 +16,7 @@ public class RuleParser extends XMLParser {
 
     public RuleParser() {
         this.ruleRepository = new RuleRepository();
-        Document ruleDoc = this.loadXMLDocument("rules.xml");
+        Document ruleDoc = this.loadXMLDocument("georules.xml");
         parsingData(ruleDoc);
         
     }

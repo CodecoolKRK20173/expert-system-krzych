@@ -4,10 +4,11 @@ public class UI {
 
     public void printMenu() {
         printSeparateLine();
-        System.out.println("Welcome in Expert Analyzer Program!");
+        System.out.println("Welcome in Geo Expert Analyzer Program!");
         printSeparateLine();
         System.out.println("1. Start program");
-        System.out.println("2. Exit program");
+        System.out.println("2. Story");
+        System.out.println("3. Exit program");
         printSeparateLine();
     }
 
@@ -56,7 +57,7 @@ public class UI {
         }
         else {
             printSeparateLine();
-            System.out.println("Expert System recommend You to buy " + summary + "!");
+            System.out.println("It's probably a " + summary + "!");
             printThickSeparateline();
         }
     }

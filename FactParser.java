@@ -20,7 +20,7 @@ public class FactParser extends XMLParser {
 
     public FactParser() {
         this.factRepository = new FactRepository();
-        Document factDoc = this.loadXMLDocument("facts.xml");
+        Document factDoc = this.loadXMLDocument("geofacts.xml");
         parseData(factDoc);
         
     }

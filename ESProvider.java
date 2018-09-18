@@ -65,7 +65,7 @@ public class ESProvider {
         
         while(fIterator.hasNext()) {
 
-            boolean compareFlag = true;
+            
             Fact currentFact = fIterator.next();
             Set<String> keySet = currentFact.getIdSet();
             int countOfRecordsInFact = keySet.size();
